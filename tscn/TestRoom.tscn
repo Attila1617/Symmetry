@@ -5,12 +5,12 @@
 [node name="World" type="Spatial"]
 
 [node name="Floor" type="CSGBox" parent="."]
-transform = Transform( 57.531, 0, 0, 0, 0.0740423, 0, 0, 0, 52.5581, 0, 0, 0 )
+transform = Transform( 60, 0, 0, 0, 0.05, 0, 0, 0, 60, 0, 0, 0 )
 calculate_tangents = false
 use_collision = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6711, -1.14079 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6317, 18.1683, -1.14079 )
 
 [node name="Camera" type="Camera" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.857572, 0.514365, 0, -0.514365, 0.857572, 0, 9.40841, 8.8254 )
