@@ -47,7 +47,12 @@ func handle_movement(delta):
 	
 	if Input.is_action_pressed("move_right"):
 		direction += transform.basis.x
-	
+
+	if Input.is_action_pressed("shift"):
+		speed = 40
+	else:
+		speed = 20
+
 	direction = direction.normalized()
 	
 	var accel = acceleration if is_on_floor() else air_acceleration
