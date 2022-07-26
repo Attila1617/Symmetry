@@ -3,14 +3,12 @@
 [ext_resource path="res://tscn/Player.tscn" type="PackedScene" id=1]
 
 [node name="World" type="Spatial"]
+transform = Transform( 1, 0.000150755, 7.43837e-05, -0.000150715, 1, -0.000265409, -7.44664e-05, 0.000265386, 1, 0, 0, 0 )
 
 [node name="Floor" type="CSGBox" parent="."]
-transform = Transform( 60, 0, 0, 0, 0.05, 0, 0, 0, 60, 0, 0, 0 )
+transform = Transform( 60, -2.61543e-05, 0.0198228, 0.0313872, 0.05, -0.00657153, -0.0198197, 5.48409e-06, 60, 0, 0, 0 )
 calculate_tangents = false
 use_collision = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6317, 18.1683, -1.14079 )
-
-[node name="Camera" type="Camera" parent="Player"]
-transform = Transform( 1, 0, 0, 0, 0.857572, 0.514365, 0, -0.514365, 0.857572, 0, 9.40841, 8.8254 )
+transform = Transform( 1, 2.50306e-11, 0, -1.7284e-12, 1, 0, 0, 0, 1, -0.000585678, 3.88546, -0.00103119 )

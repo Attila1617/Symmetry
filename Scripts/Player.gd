@@ -39,7 +39,7 @@ func handle_movement(delta):
 	if Input.is_action_pressed("move_forward"):
 		direction -= transform.basis.z
 	
-	if Input.is_action_pressed("move_backward"):
+	if Input.is_action_pressed("move_back"):
 		direction += transform.basis.z
 		
 	if Input.is_action_pressed("move_left"):
