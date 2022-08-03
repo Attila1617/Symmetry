@@ -8,7 +8,7 @@ albedo_color = Color( 0.0745098, 0.690196, 0.301961, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = ExtResource( 2 )
-size = Vector2( 128, 128 )
+size = Vector2( 500, 500 )
 subdivide_width = 256
 subdivide_depth = 256
 
@@ -22,8 +22,9 @@ material = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 2.50306e-11, 0, -1.7284e-12, 1, 0, 0, 0, 1, -0.000585678, 20.8322, -0.00103119 )
+gravity = 1.0
+max_terminal_velocity = 50.0
 
 [node name="Water" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5269, 7.15866, 0 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
