@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://realistic_water_shader/art/water/Water.material" type="Material" id=2]
@@ -9,13 +9,29 @@ size = Vector2( 500, 500 )
 subdivide_width = 256
 subdivide_depth = 256
 
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 100, 1, 100 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 200, 2, 200 )
+
 [node name="World" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 2.50306e-11, 0, -1.7284e-12, 1, 0, 0, 0, 1, 71.5753, 81.1318, -53.8952 )
+transform = Transform( 1, 2.50306e-11, 0, -1.7284e-12, 1, 0, 0, 0, 1, 21.5899, 85.2321, -8.25507 )
 
 [node name="Water" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
+
+[node name="Ground" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0 )
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0 )
+mesh = SubResource( 4 )
