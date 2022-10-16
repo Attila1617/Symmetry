@@ -26,7 +26,7 @@ albedo_color = Color( 0, 1, 0.180392, 1 )
 [node name="World" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 2.50306e-11, 0, -1.7284e-12, 1, 0, 0, 0, 1, 21.5899, 85.2321, -8.25507 )
+transform = Transform( 1, 2.50306e-11, 0, -1.7284e-12, 1, 0, 0, 0, 1, 0.510521, 53.7039, -16.8004 )
 
 [node name="Water" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
@@ -78,4 +78,4 @@ transform = Transform( 32.338, 0, 0, 0, 6.68724, 0, 0, 0, 1, 0, 57.7, 0 )
 material = SubResource( 6 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 66.2727, -68.3246 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 53.5886, -27.3794 )
